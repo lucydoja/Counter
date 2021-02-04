@@ -8,7 +8,7 @@ export class Counter extends React.Component {
 		this.startTimer = this.startTimer.bind(this);
 		this.stopTimer = this.stopTimer.bind(this);
 		this.resetTimer = this.resetTimer.bind(this);
-		this.resumeTimer = this.resumeTimer.bind(this);
+
 		this.countUp = this.countUp.bind(this);
 	}
 
@@ -52,15 +52,6 @@ export class Counter extends React.Component {
 	}
 
 	startTimer() {
-		let seconds = 0;
-		this.setState({
-			time: this.secondsToTime(seconds),
-			seconds: seconds
-		});
-		clearInterval(this.timer);
-		this.timer = setInterval(this.countUp, 1000);
-	}
-	resumeTimer() {
 		clearInterval(this.timer);
 		this.timer = setInterval(this.countUp, 1000);
 	}
@@ -80,33 +71,59 @@ export class Counter extends React.Component {
 
 	render() {
 		return (
-			<div className="d-flex justify-content-center flex-wrap mt-15">
-				<div style={estiloCaja1}>{this.state.time.h1}</div>
-				<div style={estiloCaja1}>{this.state.time.h2}</div>
-				<div style={estiloCaja2}>H</div>
-				<div style={estiloCaja1}>{this.state.time.m1}</div>
-				<div style={estiloCaja1}>{this.state.time.m2}</div>
-				<div style={estiloCaja2}>M</div>
-				<div style={estiloCaja1}>{this.state.time.s1}</div>
-				<div style={estiloCaja1}>{this.state.time.s2}</div>
-				<div style={estiloCaja2}>S</div>
-				<button onClick={this.startTimer}>Start</button>
-				<button onClick={this.stopTimer}>Stop</button>
-				<button onClick={this.resetTimer}>Reset</button>
-				<button onClick={this.resumeTimer}>Resume</button>
+			<div>
+				<div className="row d-flex justify-content-center flex-wrap">
+					<div style={estiloCaja2}>
+						{<i className="far fa-clock" />}
+					</div>
+				</div>
+				<div className=" row d-flex justify-content-center flex-wrap">
+					<div style={estiloCaja1}>{this.state.time.h1}</div>
+					<div style={estiloCaja1}>{this.state.time.h2}</div>
+					<div style={estiloCaja2}>H</div>
+					<div style={estiloCaja1}>{this.state.time.m1}</div>
+					<div style={estiloCaja1}>{this.state.time.m2}</div>
+					<div style={estiloCaja2}>M</div>
+					<div style={estiloCaja1}>{this.state.time.s1}</div>
+					<div style={estiloCaja1}>{this.state.time.s2}</div>
+					<div style={estiloCaja2}>S</div>
+				</div>
+				<div className="row d-flex justify-content-center flex-wrap">
+					<button
+						type="button"
+						className="btn btn-outline-light"
+						style={estiloBoton}
+						onClick={this.startTimer}>
+						Start
+					</button>
+					<button
+						type="button"
+						className="btn btn-outline-light"
+						style={estiloBoton}
+						onClick={this.stopTimer}>
+						Stop
+					</button>
+					<button
+						type="button"
+						className="btn btn-outline-light"
+						style={estiloBoton}
+						onClick={this.resetTimer}>
+						Reset
+					</button>
+				</div>
 			</div>
 		);
 	}
 }
 
 const estiloCaja1 = {
-	boxShadow: "0px 0px 5px gray",
-	border: "1px solid gray",
+	boxShadow: "0px 0px 10px white",
+	border: "1px solid white",
 	color: "white",
 	borderRadius: "10px",
 	height: "15vh",
 	width: "15vh",
-	margin: "5px",
+	margin: "10px",
 	fontSize: "12vh",
 	padding: "0px",
 	textAlign: "center"
@@ -119,4 +136,10 @@ const estiloCaja2 = {
 	fontSize: "12vh",
 	padding: "0px",
 	textAlign: "center"
+};
+const estiloBoton = {
+	margin: "10px",
+	fontSize: "2vh",
+	width: "12vh",
+	boxShadow: "0px 0px 2px white"
 };
