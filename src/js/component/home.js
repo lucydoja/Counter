@@ -4,12 +4,14 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 import { Cuadros } from "./Cajas";
+import { Counter } from "./Counter";
 
 //create your first component
 export function Home() {
 	return (
 		<div>
 			<Cuadros />
+			<Counter />
 		</div>
 	);
 }
