@@ -1,6 +1,6 @@
 import React from "react";
 
-export class Counter extends React.Component {
+export class CounterUp extends React.Component {
 	constructor() {
 		super();
 		this.state = { time: {}, seconds: 0 };
@@ -8,7 +8,6 @@ export class Counter extends React.Component {
 		this.startTimer = this.startTimer.bind(this);
 		this.stopTimer = this.stopTimer.bind(this);
 		this.resetTimer = this.resetTimer.bind(this);
-
 		this.countUp = this.countUp.bind(this);
 	}
 
@@ -38,17 +37,21 @@ export class Counter extends React.Component {
 		return tiempo;
 	}
 
-	countUp() {
-		let seconds = this.state.seconds + 1;
-		this.setState({
-			time: this.secondsToTime(seconds),
-			seconds: seconds
-		});
-	}
-
 	componentDidMount() {
 		let entrada = this.secondsToTime(this.state.seconds);
 		this.setState({ time: entrada });
+	}
+
+	countUp() {
+		if (this.state.seconds < 360000 - 1) {
+			let seconds = this.state.seconds + 1;
+			this.setState({
+				time: this.secondsToTime(seconds),
+				seconds: seconds
+			});
+		} else {
+			clearInterval(this.timer);
+		}
 	}
 
 	startTimer() {
