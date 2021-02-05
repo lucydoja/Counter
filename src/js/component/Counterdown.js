@@ -118,7 +118,7 @@ export class CounterDown extends React.Component {
 					<div style={estiloCaja2}>S</div>
 				</div>
 				<div className="row d-flex justify-content-center flex-wrap">
-					<div className="mr-4">
+					<div className="m-2">
 						<label>Horas:</label>
 						<input
 							className="form-control"
@@ -133,7 +133,7 @@ export class CounterDown extends React.Component {
 						/>
 					</div>
 
-					<div className="mr-4">
+					<div className="m-2">
 						<label>Minutos:</label>
 						<input
 							className="form-control"
@@ -147,7 +147,7 @@ export class CounterDown extends React.Component {
 							}}
 						/>
 					</div>
-					<div className="mr-4">
+					<div className="m-2">
 						<label>Segundos:</label>
 						<input
 							className="form-control"
@@ -168,28 +168,28 @@ export class CounterDown extends React.Component {
 						className="btn btn-outline-light"
 						style={estiloBoton}
 						onClick={this.startTimer}>
-						Start
+						<strong>Start</strong>
 					</button>
 					<button
 						type="button"
 						className="btn btn-outline-light"
 						style={estiloBoton}
 						onClick={this.stopTimer}>
-						Stop
+						<strong>Stop</strong>
 					</button>
 					<button
 						type="button"
 						className="btn btn-outline-light"
 						style={estiloBoton}
 						onClick={this.resumeTimer}>
-						Resume
+						<strong>Resume</strong>
 					</button>
 					<button
 						type="button"
 						className="btn btn-outline-light"
 						style={estiloBoton}
 						onClick={this.resetTimer}>
-						Reset
+						<strong>Reset</strong>
 					</button>
 				</div>
 			</div>

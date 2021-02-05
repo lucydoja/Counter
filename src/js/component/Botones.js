@@ -12,16 +12,16 @@ export function Toggles() {
 						type="button"
 						className="btn btn-primary btn-lg mt-4 m-2"
 						onClick={() => SetEstado(true)}>
-						Cronometro
+						<strong>Cronómetro</strong>
 					</button>
 					<button
 						type="button"
 						className="btn btn-outline-light btn-lg mt-4 m-2"
 						onClick={() => SetEstado(false)}>
-						Temporizador
+						<strong>Temporizador</strong>
 					</button>
 				</div>
-				<div id="cuerpo">
+				<div className="d-flex justify-content-center" id="cuerpo">
 					<CounterUp />
 				</div>
 			</div>
@@ -34,13 +34,13 @@ export function Toggles() {
 						type="button"
 						className="btn btn-outline-light btn-lg mt-4 m-2"
 						onClick={() => SetEstado(true)}>
-						Cronometro
+						<strong>Cronómetro</strong>
 					</button>
 					<button
 						type="button"
 						className="btn btn-primary btn-lg mt-4 m-2"
 						onClick={() => SetEstado(false)}>
-						Temporizador
+						<strong>Temporizador</strong>
 					</button>
 				</div>
 				<div id="cuerpo">

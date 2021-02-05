@@ -74,7 +74,7 @@ export class CounterUp extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="align-self-center">
 				<div className=" row d-flex justify-content-center flex-wrap">
 					<div style={estiloCaja1}>{this.state.time.h1}</div>
 					<div style={estiloCaja1}>{this.state.time.h2}</div>
@@ -92,21 +92,21 @@ export class CounterUp extends React.Component {
 						className="btn btn-outline-light"
 						style={estiloBoton}
 						onClick={this.startTimer}>
-						Start
+						<strong>Start</strong>
 					</button>
 					<button
 						type="button"
 						className="btn btn-outline-light"
 						style={estiloBoton}
 						onClick={this.stopTimer}>
-						Stop
+						<strong>Stop</strong>
 					</button>
 					<button
 						type="button"
 						className="btn btn-outline-light"
 						style={estiloBoton}
 						onClick={this.resetTimer}>
-						Reset
+						<strong>Reset</strong>
 					</button>
 				</div>
 			</div>
