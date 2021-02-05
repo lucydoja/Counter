@@ -89,6 +89,7 @@ export class CounterDown extends React.Component {
 	}
 
 	resumeTimer() {
+		clearInterval(this.timer);
 		this.timer = setInterval(this.countUp, 1000);
 	}
 
