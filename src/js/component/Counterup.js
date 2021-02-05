@@ -75,11 +75,6 @@ export class CounterUp extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="row d-flex justify-content-center flex-wrap">
-					<div style={estiloCaja2}>
-						{<i className="far fa-clock" />}
-					</div>
-				</div>
 				<div className=" row d-flex justify-content-center flex-wrap">
 					<div style={estiloCaja1}>{this.state.time.h1}</div>
 					<div style={estiloCaja1}>{this.state.time.h2}</div>
