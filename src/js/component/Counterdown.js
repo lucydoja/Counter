@@ -76,11 +76,12 @@ export class CounterDown extends React.Component {
 
 	startTimer() {
 		clearInterval(this.timer);
-		let segundos = this.secondsToTime(
-			this.state.hours,
-			this.state.minutes,
-			this.state.seconds
-		);
+		let segundos =
+			this.secondsToTime(
+				this.state.hours,
+				this.state.minutes,
+				this.state.seconds
+			) + 1;
 		this.setState({
 			totalsecs: segundos
 		});
