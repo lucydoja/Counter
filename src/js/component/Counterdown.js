@@ -121,7 +121,7 @@ export class CounterDown extends React.Component {
 				</div>
 				<div className="row d-flex justify-content-center flex-wrap">
 					<div className="m-2">
-						<label>Horas:</label>
+						<label>Hours:</label>
 						<input
 							className="form-control"
 							type="number"
@@ -136,7 +136,7 @@ export class CounterDown extends React.Component {
 					</div>
 
 					<div className="m-2">
-						<label>Minutos:</label>
+						<label>Minutes:</label>
 						<input
 							className="form-control"
 							type="number"
@@ -150,7 +150,7 @@ export class CounterDown extends React.Component {
 						/>
 					</div>
 					<div className="m-2">
-						<label>Segundos:</label>
+						<label>Seconds:</label>
 						<input
 							className="form-control"
 							min="0"
