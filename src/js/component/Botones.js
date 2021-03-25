@@ -12,13 +12,13 @@ export function Toggles() {
 						type="button"
 						className="btn btn-primary btn-lg mt-4 m-2"
 						onClick={() => SetEstado(true)}>
-						<strong>Cronómetro</strong>
+						<strong>Chronometer</strong>
 					</button>
 					<button
 						type="button"
 						className="btn btn-outline-light btn-lg mt-4 m-2"
 						onClick={() => SetEstado(false)}>
-						<strong>Temporizador</strong>
+						<strong>Timer</strong>
 					</button>
 				</div>
 				<div className="d-flex justify-content-center" id="cuerpo">
@@ -34,13 +34,13 @@ export function Toggles() {
 						type="button"
 						className="btn btn-outline-light btn-lg mt-4 m-2"
 						onClick={() => SetEstado(true)}>
-						<strong>Cronómetro</strong>
+						<strong>Chronometer</strong>
 					</button>
 					<button
 						type="button"
 						className="btn btn-primary btn-lg mt-4 m-2"
 						onClick={() => SetEstado(false)}>
-						<strong>Temporizador</strong>
+						<strong>Timer</strong>
 					</button>
 				</div>
 				<div id="cuerpo">
