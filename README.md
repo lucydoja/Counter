@@ -1,6 +1,7 @@
 # Chronometer / Timer
 
 Here you can find a chronometer (that counts time up second by second) and a timer (set the time you need and it will count down for you). With a pretty visualization, you can see each second, minute and hour going up or down. 
+
 This project was developed primarily on **JavaScript**, using **React** for the client-side. For styling I implemented **Bootstrap** and **CSS**.
 
 ### View
